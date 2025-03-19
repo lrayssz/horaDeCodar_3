@@ -1,0 +1,149 @@
+programa {
+  inteiro aprovados = 0
+  funcao inicio() {
+    /*1 - Crie uma bomba relógio (usando somente código - para deixar claro!)
+    cuja contagem regressiva vá de 30 a 0. No final da repetição escreva "EXPLOSÃO".*/
+
+    inteiro bomba = 30
+
+    escreva("Contagem regressiva...\n")
+
+    enquanto(bomba >= 0) {
+      escreva(bomba , "\n")
+      bomba = bomba - 1
+    }
+    
+    escreva("EXPLOSÃO!\n\n")
+
+    ex02()
+  }
+
+  funcao ex02() {
+    /*2 - Escreva um algoritmo para ler 2 valores informados pelo usuário e enquanto o segundo valor
+    informado for igual ou menor que ZERO, deve ser lido um novo valor, mas para a mesma variável.
+    Ou seja, para o segundo valor não pode ser aceito o valor zero nem um valor negativo. 
+    O seu programa deve imprimir o resultado da divisão do primeiro valor lido pelo segundo valor e exibir o resultado ao usuário.*/
+
+    inteiro num1, num2
+
+    escreva("Digite um valor: ")
+    leia(num1)
+    escreva("Digite outro valor: ")
+    leia(num2)
+
+    enquanto(num2 <= 0) {
+      escreva("Digite um valor positivo: ")
+      leia(num2)
+    }
+
+    real resultado = num1 / num2
+
+    escreva("O resultado da divisão dos valores escolhidos é: ", resultado , "\n\n")
+
+    ex03()
+  }
+
+  funcao ex03() {
+    /*3 - Escreva um algoritmo para imprimir os números de 1 (inclusive) a
+    10 (inclusive) em ordem decrescente. Exemplo: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1*/
+
+    inteiro num = 10
+
+    escreva("Exemplo de ordem decrescente: ")
+
+    enquanto(num >= 1) {
+      escreva(num , " ,")
+      num = num - 1
+    }
+
+    escreva("\n\n")
+
+    ex04()
+  }
+
+  funcao ex04() {
+    /*4 - Faça um algoritmo que calcule e escreva a média aritmética
+    dos números inteiros entre 15 (inclusive) e 100 (inclusive).*/
+
+    inteiro num1 = 15
+    inteiro num2 = 100
+    inteiro soma = num1 + num2
+    real resultado = soma / 2
+
+    escreva("A média aritmética dos números inteiros entre 15 e 100 é: ", resultado , "\n\n")
+
+    ex05()
+  }
+
+  funcao ex05() {
+    /*5 - Faça um algoritmo que calcule e escreva a média aritmética dos dois números inteiros informados
+    pelo usuário e todos os números inteiros entre eles. Considere que o primeiro sempre será menor que o segundo.*/
+
+    inteiro num1, num2
+
+    escreva("Digite o primeiro valor: ")
+    leia(num1)
+    escreva("Digite o segundo valor: ")
+    leia(num2)
+
+    enquanto(num1 >= num2) {
+      escreva("Digite um valor menor que o segundo para o primeiro valor: ")
+      leia(num1)
+    }
+
+    inteiro soma = num1 + num2
+    real resultado = soma / 2
+
+    escreva("A média aritmética entre " , num1 , " e " , num2 , " é: " , resultado , "\n\n")
+
+    ex06()
+  }
+
+  funcao ex06() {
+    /*6 - Escreva um programa para ler 2 notas de um aluno, calcular e imprimir a média final.
+    Considere que a nota de aprovação é 9,5. Logo após escrever a mensagem "Calcular a média de
+    outro aluno Sim/Não?" e solicitar um resposta. Se a resposta for "S", o programa deve ser
+    executado novamente, caso contrário deve ser encerrado exibindo a quantidade de alunos aprovados.*/
+
+    real nota1, nota2
+    caracter resposta
+
+    escreva("Qual sua nota em português?: ")
+    leia(nota1)
+    escreva("Qual sua nota em matemática?: ")
+    leia(nota2)
+
+    real soma = nota1 + nota2
+    real media = soma / 2
+
+    se(media >= 9.5) {
+      escreva("Parabéns! Você foi aprovado! Sua média foi: " , media)
+      aprovados = aprovados + 1
+    } senao {
+      escreva("Que pena! Você não foi aprovado! Sua média foi: " , media)
+    }
+
+    escreva("\nCalcular a média de outro aluno\nS/N?")
+    leia(resposta)
+
+    escolha(resposta) {
+      caso "S":
+      ex06()
+      pare
+
+      caso "N":
+        escreva("O número de aprovados é: " , aprovados , "\n\n")
+    }
+
+    ex07()
+
+  }
+
+  funcao ex07() {
+    /*7 - Escreva um algoritmo para ler as notas de avaliações de um aluno,
+    calcule e imprima a média (simples) desse aluno. Só devem ser aceitos valores
+    válidos durante a leitura (0 a 10) para cada nota. São 6 notas ao total.
+    Caso o valor informado para qualquer uma das notas esteja fora do limite estabelecido,
+    deve ser solicitado um novo valor ao usuário.*/
+  }
+}
