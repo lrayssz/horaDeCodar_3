@@ -145,5 +145,216 @@ programa {
     válidos durante a leitura (0 a 10) para cada nota. São 6 notas ao total.
     Caso o valor informado para qualquer uma das notas esteja fora do limite estabelecido,
     deve ser solicitado um novo valor ao usuário.*/
+
+    real nota1, nota2, nota3, nota4, nota5, nota6
+
+    escreva("Qual sua nota em Português?: ")
+    leia(nota1)
+
+    enquanto(nota1 > 10 ou nota1 < 0) {
+      escreva("Apenas notas de 0 a 10 são válidas! Tente outra nota para Português: ")
+      leia(nota1)
+    }
+
+    escreva("Qual sua nota em Matemática?: ")
+    leia(nota2)
+
+    enquanto(nota2 > 10 ou nota2 < 0) {
+      escreva("Apenas notas de 0 a 10 são válidas! Tente outra nota para Matemática: ")
+      leia(nota2)
+    }
+
+    escreva("Qual sua nota em Artes?: ")
+    leia(nota3)
+
+    enquanto(nota3 > 10 ou nota3 < 0) {
+      escreva("Apenas notas de 0 a 10 são válidas! Tente outra nota para Artes: ")
+      leia(nota3)
+    }
+
+    escreva("Qual sua nota em Filosofia?: ")
+    leia(nota4)
+
+    enquanto(nota4 > 10 ou nota4 < 0) {
+      escreva("Apenas notas de 0 a 10 são válidas! Tente outra nota para Filosofia: ")
+      leia(nota4)
+    }
+
+    escreva("Qual sua nota em História?: ")
+    leia(nota5)
+
+    enquanto(nota5 > 10 ou nota5 < 0) {
+      escreva("Apenas notas de 0 a 10 são válidas! Tente outra nota para História: ")
+      leia(nota5)
+    }
+
+    escreva("Qual sua nota em Geografia?: ")
+    leia(nota6)
+
+    enquanto(nota6 > 10 ou nota6 < 0) {
+      escreva("Apenas notas de 0 a 10 são válidas! Tente outra nota para Geografia: ")
+      leia(nota6)
+    }
+
+    real soma = nota1 + nota2 + nota3 + nota4 + nota5 + nota6
+    real media = soma / 6
+
+    escreva("A média do aluno é: " , media , "\n\n")
+
+    ex08()
+  }
+
+  funcao ex08() {
+    /*8 - Ler um valor N e imprimir todos os valores inteiros entre 1 (inclusive)
+    e N (inclusive). Considere que o N será sempre maior que ZERO.
+    N  é um valor informado pelo usuário*/
+
+    inteiro num
+
+    escreva("Digite o valor desejado: ")
+    leia(num)
+
+    enquanto(num <= 0) {
+      escreva("Digite um valor maior que zero: ")
+      leia(num)
+    }
+
+    escreva("Os números inteiros entre " , num , " e 1 são: ")
+
+    enquanto(num >= 1) {
+      escreva(num , " ")
+      num = num - 1
+    }
+
+    escreva("\n\n")
+
+    ex09()
+  }
+
+  funcao ex09() {
+    /*9 - Escreva um algoritmo para imprimir os 10 primeiros números inteiros maiores que 100.*/
+
+    inteiro num = 101
+
+    escreva("Os 10 primeiros números inteiros maiores que 100 são: ")
+
+    enquanto(num <= 111){
+      escreva(num , " ")
+      num = num + 1
+    }
+
+    escreva("\n\n")
+
+    ex10()
+  }
+
+  funcao ex10() {
+    /*10 - Escreva um programa em que o usuário informe 10 valores e escreva quantos desses valores lidos
+    estão entre os números 24 e 42 (incluindo os valores 24 e 42) e quantos deles estão fora deste intervalo.*/
+
+    inteiro num1, num2, num3, num4, num5, num6, num7, num8, num9, num10
+    inteiro dentro = 0
+    inteiro fora = 0
+
+    escreva("Digite o primeiro valor: ")
+    leia(num1)
+    escreva("Digite o segundo valor: ")
+    leia(num2)
+    escreva("Digite o terceiro valor: ")
+    leia(num3)
+    escreva("Digite o quarto valor: ")
+    leia(num4)
+    escreva("Digite o quinto valor: ")
+    leia(num5)
+    escreva("Digite o sexto valor: ")
+    leia(num6)
+    escreva("Digite o setimo valor: ")
+    leia(num7)
+    escreva("Digite o oitavo valor: ")
+    leia(num8)
+    escreva("Digite o nono valor: ")
+    leia(num9)
+    escreva("Digite o decimo valor: ")
+    leia(num10)
+
+    se(num1 >= 24 e num1 <= 42) {
+      dentro = dentro + 1
+    } senao {
+      fora = fora + 1
+    }
+
+    se(num2 >= 24 e num2 <= 42) {
+      dentro = dentro + 1
+    } senao {
+      fora = fora + 1
+    }
+
+    se(num3 >= 24 e num3 <= 42) {
+      dentro = dentro + 1
+    } senao {
+      fora = fora + 1
+    }
+
+    se(num4 >= 24 e num4 <= 42) {
+      dentro = dentro + 1
+    } senao {
+      fora = fora + 1
+    }
+
+    se(num5 >= 24 e num5 <= 42) {
+      dentro = dentro + 1
+    } senao {
+      fora = fora + 1
+    }
+
+    se(num6 >= 24 e num6 <= 42) {
+      dentro = dentro + 1
+    } senao {
+      fora = fora + 1
+    }
+
+    se(num7 >= 24 e num7 <= 42) {
+      dentro = dentro + 1
+    } senao {
+      fora = fora + 1
+    }
+
+    se(num8 >= 24 e num8 <= 42) {
+      dentro = dentro + 1
+    } senao {
+      fora = fora + 1
+    }
+
+    se(num9 >= 24 e num9 <= 42) {
+      dentro = dentro + 1
+    } senao {
+      fora = fora + 1
+    }
+
+    se(num10 >= 24 e num10 <= 42) {
+      dentro = dentro + 1
+    } senao {
+      fora = fora + 1
+    }
+
+    escreva("Total de números dentro de 24 e 42: " , dentro , "\nTotal de números fora de 24 e 42: " , fora , "\n\n")
+
+    ex11()
+  }
+
+  funcao ex11() {
+    /*11 - Escreva um programa para imprimir todas as tabuadas de 1 a N. N será informado pelo usuário.*/
+
+    inteiro num
+    inteiro tab
+
+    escreva("Digite um valor: ")
+    leia(num)
+
+		para (inteiro c=1; c<=10; c++)
+		{
+			tab = c * num
+			escreva (num , " x ", c, " = ", tab, "\n")
+		}
   }
 }
